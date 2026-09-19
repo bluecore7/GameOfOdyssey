@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bp77qcvytq8on"]
+
+[ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="1_5cflo"]
+
+[node name="LevelScene" type="Node2D" unique_id=715829182]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1179678203]
+offset_left = 224.0
+offset_top = 190.0
+offset_right = 420.0
+offset_bottom = 458.0
+texture = ExtResource("1_5cflo")
