@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bymqtyescv0js"]
 
 [ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="1_tjgmj"]
-[ext_resource type="Script" uid="uid://gxbh0ww4dyh2" path="res://Odessey/Scene/title_screen.gd" id="1_visv0"]
+[ext_resource type="Script" uid="uid://gxbh0ww4dyh2" path="res://Scene/title_screen.gd" id="1_visv0"]
 
 [node name="TitleScreen" type="Node2D" unique_id=884764423]
 script = ExtResource("1_visv0")
