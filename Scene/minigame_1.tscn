@@ -11,12 +11,12 @@
 size = Vector2(1151, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_448jo"]
-size = Vector2(518.59375, 58.84375)
+size = Vector2(518.59375, 50.421875)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_20pqg"]
 
 [sub_resource type="Animation" id="Animation_hcyjv"]
-length = 0.001
+length = 8.533334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +27,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(434, 442)]
+"values": [Vector2(482, 310)]
 }
 
 [sub_resource type="Animation" id="Animation_poyv6"]
@@ -37,13 +37,13 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Garlic:position")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.13333334, 1),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(434, 442), Vector2(434, 442)]
+"values": [Vector2(482, 310), Vector2(482, 310)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_omgj1"]
@@ -53,7 +53,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_448jo"]
-radius = 5.29867
+radius = 7.6398125
 
 [node name="Minigame1" type="Node2D" unique_id=1573758845]
 position = Vector2(-1, 1)
@@ -84,40 +84,40 @@ shape = SubResource("RectangleShape2D_c70rt")
 [node name="Platform2" type="StaticBody2D" parent="." unique_id=2044195864]
 
 [node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=1136542836]
-offset_left = 123.0
-offset_top = 361.0
-offset_right = 638.0
-offset_bottom = 414.0
+offset_left = 124.0
+offset_top = 375.0
+offset_right = 639.0
+offset_bottom = 428.0
 color = Color(0.7607843, 0.4392157, 0.16078432, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=204087183]
-position = Vector2(379.8125, 389.09375)
+position = Vector2(381, 402.21094)
 shape = SubResource("RectangleShape2D_448jo")
 
 [node name="Platform3" type="StaticBody2D" parent="." unique_id=1769197952]
 
 [node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=1583131]
-offset_left = 583.0
-offset_top = 223.0
-offset_right = 1098.0
-offset_bottom = 276.0
+offset_left = 579.0
+offset_top = 254.0
+offset_right = 1094.0
+offset_bottom = 307.0
 color = Color(0.7607843, 0.4392157, 0.16078432, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=12081816]
-position = Vector2(839.90625, 248)
+position = Vector2(841, 279)
 shape = SubResource("RectangleShape2D_448jo")
 
 [node name="Platform4" type="StaticBody2D" parent="." unique_id=379944219]
 
 [node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=666426946]
 offset_left = 113.0
-offset_top = 65.0
+offset_top = 122.0
 offset_right = 628.0
-offset_bottom = 118.0
+offset_bottom = 175.0
 color = Color(0.7607843, 0.4392157, 0.16078432, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=1445705307]
-position = Vector2(374, 92)
+position = Vector2(369, 147)
 shape = SubResource("RectangleShape2D_448jo")
 
 [node name="Player" parent="." unique_id=970065998 instance=ExtResource("1_hcyjv")]
@@ -127,10 +127,10 @@ position = Vector2(71, 489)
 script = ExtResource("2_omgj1")
 
 [node name="Garlic" type="TextureRect" parent="Garlic" unique_id=1181312500]
-offset_left = 434.0
-offset_top = 442.0
-offset_right = 497.0
-offset_bottom = 495.0
+offset_left = 482.0
+offset_top = 310.0
+offset_right = 545.0
+offset_bottom = 363.0
 texture = SubResource("PlaceholderTexture2D_20pqg")
 
 [node name="animation" type="AnimationPlayer" parent="Garlic" unique_id=1661066483]
@@ -141,7 +141,51 @@ position = Vector2(469.00006, 472.00003)
 scale = Vector2(3.6, 2.28)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic/Area2D" unique_id=1454947684]
-position = Vector2(-0.5555725, -1.7544003)
+position = Vector2(-46.66668, 0.4385829)
+scale = Vector2(1.3111808, 2.9410505)
+shape = SubResource("CircleShape2D_448jo")
+
+[node name="Garlic2" type="Node2D" parent="." unique_id=611648212]
+script = ExtResource("2_omgj1")
+
+[node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=1210138375]
+offset_left = 482.0
+offset_top = 310.0
+offset_right = 543.0
+offset_bottom = 371.0
+texture = SubResource("PlaceholderTexture2D_20pqg")
+
+[node name="animation" type="AnimationPlayer" parent="Garlic2" unique_id=1833433541]
+libraries/ = SubResource("AnimationLibrary_omgj1")
+
+[node name="Area2D" type="Area2D" parent="Garlic2" unique_id=1111537335]
+position = Vector2(469.00006, 472.00003)
+scale = Vector2(3.6, 2.28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic2/Area2D" unique_id=1194455035]
+position = Vector2(13.333328, -60.087708)
+scale = Vector2(1.3111808, 2.9410505)
+shape = SubResource("CircleShape2D_448jo")
+
+[node name="Garlic3" type="Node2D" parent="." unique_id=461946364]
+script = ExtResource("2_omgj1")
+
+[node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=48398411]
+offset_left = 482.0
+offset_top = 310.0
+offset_right = 544.99994
+offset_bottom = 362.9999
+texture = SubResource("PlaceholderTexture2D_20pqg")
+
+[node name="animation" type="AnimationPlayer" parent="Garlic3" unique_id=842971313]
+libraries/ = SubResource("AnimationLibrary_omgj1")
+
+[node name="Area2D" type="Area2D" parent="Garlic3" unique_id=1189573825]
+position = Vector2(469.00006, 472.00003)
+scale = Vector2(3.6, 2.28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=1384813174]
+position = Vector2(-74.16669, -190.78949)
 scale = Vector2(1.3111808, 2.9410505)
 shape = SubResource("CircleShape2D_448jo")
 
@@ -149,3 +193,5 @@ shape = SubResource("CircleShape2D_448jo")
 position = Vector2(-4, 0)
 
 [connection signal="garlic_collected" from="Garlic" to="." method="garlic_collect"]
+[connection signal="garlic_collected" from="Garlic2" to="." method="garlic_collect"]
+[connection signal="garlic_collected" from="Garlic3" to="." method="garlic_collect"]
