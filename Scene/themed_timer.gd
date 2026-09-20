@@ -7,8 +7,8 @@ var time: float
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
-	timer.text = str(snapped(time, 0.10))
+func _process(_delta: float) -> void:
+	timer.text = "%0.1f" % max(time, 0.0)
 
 func Timer(start_time: float):
 	time = start_time
