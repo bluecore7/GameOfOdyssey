@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bp77qcvytq8on"]
 
-[ext_resource type="Script" uid="uid://dikjp7sp5os6e" path="res://Scene/level_scene.gd" id="1_emy2d"]
-[ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="2_yyjr6"]
+[ext_resource type="Script" uid="uid://dikjp7sp5os6e" path="res://Scene/level_screen.gd" id="1_cxgh1"]
+[ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="2_8o1hp"]
 
 [sub_resource type="Texture2DRD" id="Texture2DRD_448jo"]
 
-[node name="LevelScene" type="Node2D" unique_id=715829182]
-script = ExtResource("1_emy2d")
+[node name="LevelScreen" type="Node2D" unique_id=715829182]
+script = ExtResource("1_cxgh1")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1179678203]
 offset_left = 5.0
@@ -16,31 +16,31 @@ offset_bottom = 643.0
 texture = SubResource("Texture2DRD_448jo")
 metadata/_edit_lock_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1869045147]
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=1869045147]
 offset_left = 249.0
 offset_top = 90.0
 offset_right = 910.0
 offset_bottom = 227.0
 
-[node name="Athena1" type="TextureRect" parent="HBoxContainer" unique_id=154385452]
+[node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=154385452]
 layout_mode = 2
-texture = ExtResource("2_yyjr6")
+texture = ExtResource("2_8o1hp")
 
-[node name="Athena2" type="TextureRect" parent="HBoxContainer" unique_id=63568352]
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=63568352]
 layout_mode = 2
-texture = ExtResource("2_yyjr6")
+texture = ExtResource("2_8o1hp")
 
-[node name="Athena3" type="TextureRect" parent="HBoxContainer" unique_id=210650207]
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=210650207]
 layout_mode = 2
-texture = ExtResource("2_yyjr6")
+texture = ExtResource("2_8o1hp")
 
-[node name="Athena4" type="TextureRect" parent="HBoxContainer" unique_id=1482984124]
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=1482984124]
 layout_mode = 2
-texture = ExtResource("2_yyjr6")
+texture = ExtResource("2_8o1hp")
 
-[node name="Athena5" type="TextureRect" parent="HBoxContainer" unique_id=1529438308]
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1529438308]
 layout_mode = 2
-texture = ExtResource("2_yyjr6")
+texture = ExtResource("2_8o1hp")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=206294397]
 offset_left = 509.0
