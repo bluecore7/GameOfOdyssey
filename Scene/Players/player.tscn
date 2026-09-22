@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://bhyo532kc4ji"]
 
 [ext_resource type="Script" uid="uid://de8vpgb0hhuxt" path="res://Scene/Players/player.gd" id="1_kelma"]
+[ext_resource type="Texture2D" uid="uid://bibmv31mt8a1j" path="res://assets/images/Player.png" id="2_5bydd"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0oo7c"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_448jo"]
-radius = 30.88689
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8o1hp"]
+size = Vector2(49, 57)
 
 [node name="Player" type="CharacterBody2D" unique_id=970065998]
 script = ExtResource("1_kelma")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=278897758]
-position = Vector2(2.25, 7.6293945e-06)
-scale = Vector2(40.5, 46)
-texture = SubResource("PlaceholderTexture2D_0oo7c")
+position = Vector2(98.34376, 567.5)
+scale = Vector2(0.28509346, 0.18944098)
+texture = ExtResource("2_5bydd")
+region_enabled = true
+region_rect = Rect2(636.3533, 34.350586, 187.07745, 322.71094)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889974940]
-position = Vector2(1.25, 7.6293945e-06)
-shape = SubResource("CircleShape2D_448jo")
+position = Vector2(97.5, 566.5)
+shape = SubResource("RectangleShape2D_8o1hp")
