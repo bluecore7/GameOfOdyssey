@@ -13,6 +13,7 @@ offset_right = 2814.0
 offset_bottom = 1536.0
 scale = Vector2(0.40955317, 0.4224306)
 texture = ExtResource("2_u8psj")
+metadata/_edit_lock_ = true
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=122677207]
 clip_contents = false
@@ -30,6 +31,7 @@ theme_override_font_sizes/normal_font_size = 108
 bbcode_enabled = true
 text = "[wave amp=30 freq=2]Odyssey[/wave]"
 visible_characters_behavior = 3
+metadata/_edit_lock_ = true
 
 [node name="Subtitle" type="RichTextLabel" parent="." unique_id=957945092]
 anchors_preset = -1
@@ -48,6 +50,7 @@ theme_override_font_sizes/bold_italics_font_size = 16
 theme_override_font_sizes/italics_font_size = 16
 theme_override_font_sizes/mono_font_size = 16
 text = "- Chapter 1"
+metadata/_edit_lock_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=519351233]
 anchors_preset = -1
