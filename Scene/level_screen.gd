@@ -1,51 +1,55 @@
 extends Node2D
-@onready var garlic_container: HBoxContainer = $GarlicContainer
-@onready var garlic: TextureRect = $GarlicContainer/Garlic
-@onready var garlic_2: TextureRect = $GarlicContainer/Garlic2
-@onready var garlic_3: TextureRect = $GarlicContainer/Garlic3
-@onready var garlic_4: TextureRect = $GarlicContainer/Garlic4
-@onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
+@onready var Health_container: HBoxContainer = $HealthContainer
+@onready var athena_1: TextureRect = $HealthContainer/Athena1
+@onready var athena_2: TextureRect = $HealthContainer/Athena2
+@onready var athena_3: TextureRect = $HealthContainer/Athena3
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
-
+@onready var stage_name : RichTextLabel =$Stage_Name
 var time
 
 func _ready() -> void:
-	await Timer(5.0) # using the function created
-	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
-		Global.minigames_done = Global.minigames_done +1
-		get_tree().change_scene_to_file("res://Scene/minigame_" + str(Global.minigames_done) + ".tscn") # changes your scene by arranging this frankenstein path. 
-# Above, your script is being told to go to the next minigame. If the 
-# current minigame is Level 1, then you would be on minigame 1. If you 
-# complete that level, you have the minigames_done add one, and then you 
-# look for the scene titled `minigame_` and then whatever minigame number 
-# should be next. Make sure you name your minigame saves appropriately.
-
-	else:
-		get_tree().change_scene_to_file("res://Scene/title_screen.tscn") # changes your scene
+	if Global.minigames_done < 3:
+		Global.minigames_done += 1
+		
+	stage_name.text = Global.Game_Name.get(Global.minigames_done, "") 
 	
+	# Start typewriter effect in code
+	type_out(stage_name, 0.06)
+		
+	await Timer(3.0)
+	
+	if Global.minigames_done <= 3:
+		get_tree().change_scene_to_file("res://Scene/minigame_" + str(Global.minigames_done) + ".tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scene/title_screen.tscn")
 
+# Helper function to type character by character
+func type_out(label: RichTextLabel, speed: float) -> void:
+	label.visible_characters = 0
+	var total_chars = label.get_total_character_count()
+	
+	for i in range(total_chars + 1):
+		label.visible_characters = i
+		# If you have an AudioStreamPlayer node, you can play sound here:
+		# $TypeSound.play()
+		await get_tree().create_timer(speed).timeout
+		
 func _process(_delta: float) -> void: # runs EVERY FRAME
 	match Global.lives: # asks or checks if lives is equal to one of 
 #these values, cool hack. by the way this is a horrid way to illustrate the 
 #lives visually so later you can always find alternative code. Now, dw abt it.
 
-		4:
-			garlic.hide()
-		3:
-			garlic.hide()
-			garlic_2.hide()
+
 		2:
-			garlic.hide()
-			garlic_2.hide()
-			garlic_3.hide()
+			athena_1.hide()
 		1:
-			garlic.hide()
-			garlic_2.hide()
-			garlic_3.hide()
-			garlic_4.hide()
+			athena_1.hide()
+			athena_2.hide()
 		0:
-			garlic_container.hide() # just hides everything
+			athena_1.hide()
+			athena_2.hide()
+			athena_3.hide()
 	
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
 	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)

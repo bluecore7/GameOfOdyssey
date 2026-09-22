@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://bp77qcvytq8on"]
 
 [ext_resource type="Script" uid="uid://dikjp7sp5os6e" path="res://Scene/level_screen.gd" id="1_cxgh1"]
-[ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="2_8o1hp"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_448jo"]
+[ext_resource type="Texture2D" uid="uid://bsnqw5bkjrg2q" path="res://assets/images/Level.png" id="2_cg7in"]
+[ext_resource type="Texture2D" uid="uid://d2q0uumv6cqdr" path="res://assets/images/Athena.png" id="3_8o1hp"]
 
 [node name="LevelScreen" type="Node2D" unique_id=715829182]
 script = ExtResource("1_cxgh1")
@@ -13,44 +12,41 @@ offset_left = 5.0
 offset_top = 3.0
 offset_right = 1148.0
 offset_bottom = 643.0
-texture = SubResource("Texture2DRD_448jo")
-metadata/_edit_lock_ = true
+scale = Vector2(0.40777963, 0.42036605)
+texture = ExtResource("2_cg7in")
 
-[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=1869045147]
-offset_left = 249.0
-offset_top = 90.0
-offset_right = 910.0
-offset_bottom = 227.0
+[node name="HealthContainer" type="HBoxContainer" parent="." unique_id=1869045147]
+offset_left = 325.0
+offset_top = 37.0
+offset_right = 3405.0
+offset_bottom = 1573.0
+scale = Vector2(0.16336532, 0.12867412)
 
-[node name="Garlic" type="TextureRect" parent="GarlicContainer" unique_id=154385452]
+[node name="Athena1" type="TextureRect" parent="HealthContainer" unique_id=154385452]
 layout_mode = 2
-texture = ExtResource("2_8o1hp")
+texture = ExtResource("3_8o1hp")
 
-[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=63568352]
+[node name="Athena2" type="TextureRect" parent="HealthContainer" unique_id=63568352]
 layout_mode = 2
-texture = ExtResource("2_8o1hp")
+texture = ExtResource("3_8o1hp")
 
-[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=210650207]
+[node name="Athena3" type="TextureRect" parent="HealthContainer" unique_id=210650207]
 layout_mode = 2
-texture = ExtResource("2_8o1hp")
-
-[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=1482984124]
-layout_mode = 2
-texture = ExtResource("2_8o1hp")
-
-[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1529438308]
-layout_mode = 2
-texture = ExtResource("2_8o1hp")
+texture = ExtResource("3_8o1hp")
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=206294397]
-offset_left = 509.0
-offset_top = 273.0
-offset_right = 723.0
-offset_bottom = 339.0
+offset_left = 489.0
+offset_top = 285.0
+offset_right = 684.3162
+offset_bottom = 360.3064
+scale = Vector2(0.92158246, 1.0224893)
+theme_override_colors/default_color = Color(1, 0.56078434, 0.047058824, 1)
+theme_override_colors/font_outline_color = Color(0.5882353, 0.56078434, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.1254902, 1)
 theme_override_constants/line_separation = 3
 theme_override_constants/shadow_outline_size = 8
 theme_override_constants/outline_size = 10
-theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/normal_font_size = 52
 theme_override_font_sizes/bold_font_size = 26
 theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/italics_font_size = 19
@@ -58,9 +54,25 @@ theme_override_font_sizes/mono_font_size = 21
 text = "Level 1"
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=752282509]
-offset_left = 550.0
-offset_top = 417.0
-offset_right = 626.0
-offset_bottom = 473.0
-theme_override_font_sizes/normal_font_size = 38
+offset_left = 527.0
+offset_top = 401.0
+offset_right = 597.0
+offset_bottom = 462.0
+theme_override_colors/default_color = Color(1, 0.5764706, 0.20392157, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0.20392157, 1)
+theme_override_font_sizes/normal_font_size = 40
 text = "0.0"
+
+[node name="Stage_Name" type="RichTextLabel" parent="." unique_id=1819836202]
+offset_left = 392.0
+offset_top = 578.0
+offset_right = 763.0
+offset_bottom = 645.0
+theme_override_colors/default_color = Color(1, 0.07999998, 0.07999998, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(17.259508, 17.259508, 4.950616, 1)
+theme_override_font_sizes/normal_font_size = 48
+fit_content = true
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.5
