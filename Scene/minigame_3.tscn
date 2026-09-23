@@ -5,6 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://bhyo532kc4ji" path="res://Scene/Players/player.tscn" id="2_6sc5i"]
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="4_fx0o3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4emm"]
+size = Vector2(108, 616)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0konc"]
+size = Vector2(1363, 101)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y1vo"]
 size = Vector2(1148.5, 128)
 
@@ -16,6 +22,24 @@ offset_right = 1144.0
 offset_bottom = 520.0
 scale = Vector2(0.68884456, 0.54906845)
 texture = ExtResource("1_ttgjc")
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1137164025]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=339399543]
+position = Vector2(1208, 304)
+shape = SubResource("RectangleShape2D_l4emm")
+
+[node name="Wall1" type="StaticBody2D" parent="." unique_id=1939777486]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" unique_id=1037104849]
+position = Vector2(581.5, -51.5)
+shape = SubResource("RectangleShape2D_0konc")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=1910660816]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=1849268094]
+position = Vector2(-58, 314)
+shape = SubResource("RectangleShape2D_l4emm")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=1100678786]
 

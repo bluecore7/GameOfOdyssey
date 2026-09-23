@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://cxqj2e4u8vln0"]
+[gd_scene format=3 uid="uid://ceoctjb5svtxx"]
 
-[ext_resource type="Script" path="res://Scene/settings.gd" id="1_settings"]
+[ext_resource type="Script" uid="uid://cyjebk2ap6nq4" path="res://Scene/settings.gd" id="1_settings"]
 [ext_resource type="Texture2D" uid="uid://kb6h38yg2txv" path="res://assets/images/Title.png" id="2_u8psj"]
 [ext_resource type="AudioStream" uid="uid://dvd6kvb6dshul" path="res://assets/audio/blip.wav" id="3_blip"]
 
-[node name="Settings" type="Node2D"]
+[node name="Settings" type="Node2D" unique_id=1466913829]
 script = ExtResource("1_settings")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1093170276]
 offset_right = 2814.0
 offset_bottom = 1536.0
 scale = Vector2(0.409553, 0.422431)
 texture = ExtResource("2_u8psj")
 metadata/_edit_lock_ = true
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=2041719797]
 clip_contents = false
 offset_left = 376.0
 offset_top = 40.0
@@ -27,7 +27,7 @@ theme_override_font_sizes/normal_font_size = 72
 bbcode_enabled = true
 text = "[center][wave amp=25 freq=2]Settings[/wave][/center]"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=192517382]
 offset_left = 376.0
 offset_top = 200.0
 offset_right = 776.0
@@ -35,18 +35,18 @@ offset_bottom = 470.0
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="VolumeLabel" type="Label" parent="VBoxContainer"]
+[node name="VolumeLabel" type="Label" parent="VBoxContainer" unique_id=1124049047]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.85, 0.6, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 22
 text = "Music Volume"
 
-[node name="VolumeRow" type="HBoxContainer" parent="VBoxContainer"]
+[node name="VolumeRow" type="HBoxContainer" parent="VBoxContainer" unique_id=283255567]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="MusicSlider" type="HSlider" parent="VBoxContainer/VolumeRow"]
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/VolumeRow" unique_id=1347414735]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -54,7 +54,7 @@ max_value = 1.0
 step = 0.01
 value = 0.8
 
-[node name="PercentLabel" type="Label" parent="VBoxContainer/VolumeRow"]
+[node name="PercentLabel" type="Label" parent="VBoxContainer/VolumeRow" unique_id=1119945209]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.9, 0.7, 1)
@@ -62,24 +62,24 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 20
 text = "80%"
 
-[node name="MuteButton" type="CheckButton" parent="VBoxContainer"]
+[node name="MuteButton" type="CheckButton" parent="VBoxContainer" unique_id=609902021]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.85, 0.6, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 22
 text = "Mute"
 
-[node name="Spacer" type="Control" parent="VBoxContainer"]
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1707711783]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="VBoxContainer" unique_id=1022307037]
 layout_mode = 2
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 26
 text = "Back"
 
-[node name="ButtonBlip" type="AudioStreamPlayer" parent="."]
+[node name="ButtonBlip" type="AudioStreamPlayer" parent="." unique_id=381660179]
 stream = ExtResource("3_blip")
 
 [connection signal="value_changed" from="VBoxContainer/VolumeRow/MusicSlider" to="." method="_on_music_slider_value_changed"]

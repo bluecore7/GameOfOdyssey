@@ -7,6 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="3_k70ht"]
 [ext_resource type="Texture2D" uid="uid://ca64ho232cjti" path="res://assets/images/characters/mermaid_inactive.png" id="4_8x6x7"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihuf6"]
+size = Vector2(108, 616)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsal0"]
+size = Vector2(1363, 101)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8x6x7"]
 size = Vector2(1148, 131)
 
@@ -34,6 +40,24 @@ theme_override_colors/font_shadow_color = Color(18.892157, 18.892157, 18.469584,
 theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[wave]Find the SIRENS[/wave]"
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1051238256]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=783360005]
+position = Vector2(1208, 296)
+shape = SubResource("RectangleShape2D_ihuf6")
+
+[node name="Wall1" type="StaticBody2D" parent="." unique_id=1823614309]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall1" unique_id=1443982118]
+position = Vector2(581.5, -51.5)
+shape = SubResource("RectangleShape2D_lsal0")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=1275346513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=1438258411]
+position = Vector2(-58, 314)
+shape = SubResource("RectangleShape2D_ihuf6")
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=421455376]
 
