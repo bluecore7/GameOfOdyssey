@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b0qhamgjkq27u"]
+
+[ext_resource type="Script" uid="uid://d14qbu3ra2as5" path="res://Scene/minigame_3.gd" id="1_0konc"]
+[ext_resource type="Texture2D" uid="uid://wp8f50aaaa5n" path="res://assets/images/the_Cyclopes.png" id="1_ttgjc"]
+[ext_resource type="PackedScene" uid="uid://bhyo532kc4ji" path="res://Scene/Players/player.tscn" id="2_6sc5i"]
+[ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="4_fx0o3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4y1vo"]
+size = Vector2(1148.5, 128)
+
+[node name="minigame_3" type="Node2D" unique_id=1807149510]
+script = ExtResource("1_0konc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1036724274]
+offset_right = 1144.0
+offset_bottom = 520.0
+scale = Vector2(0.68884456, 0.54906845)
+texture = ExtResource("1_ttgjc")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=1100678786]
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=1392633288]
+offset_left = 1.0
+offset_top = 517.0
+offset_right = 1152.0
+offset_bottom = 645.0
+color = Color(0.7607843, 0.4392157, 0.16078432, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=449540903]
+position = Vector2(575.75, 581)
+shape = SubResource("RectangleShape2D_4y1vo")
+
+[node name="Player" parent="." unique_id=970065998 instance=ExtResource("2_6sc5i")]
+position = Vector2(-56, -80)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=259379392]
+wait_time = 0.6
+autostart = true
+
+[node name="Themed_timer" parent="." unique_id=919372843 instance=ExtResource("4_fx0o3")]
+
+[node name="HazardContainer" type="Node2D" parent="." unique_id=1982736412]
