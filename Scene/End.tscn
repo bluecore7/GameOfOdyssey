@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c0erfb0mv3xxf"]
 
 [ext_resource type="Texture2D" uid="uid://b88acsqodbvhn" path="res://assets/images/END.png" id="1_00xbc"]
+[ext_resource type="Script" path="res://Scene/end.gd" id="2_end"]
+[ext_resource type="AudioStream" uid="uid://dvd6kvb6dshul" path="res://assets/audio/blip.wav" id="3_blip"]
 
 [node name="END" type="Node2D" unique_id=797759765]
+script = ExtResource("2_end")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1852487304]
 offset_right = 824.0
@@ -33,3 +36,29 @@ theme_override_colors/font_outline_color = Color(0.9372549, 0.38431373, 0.172549
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/normal_font_size = 35
 text = "Who doesn't understand pain?"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=184918201]
+offset_left = 426.0
+offset_top = 380.0
+offset_right = 726.0
+offset_bottom = 500.0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="MainMenu" type="Button" parent="VBoxContainer" unique_id=987123456]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 26
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=987123457]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[node name="ButtonBlip" type="AudioStreamPlayer" parent="." unique_id=1161909572]
+stream = ExtResource("3_blip")
+
+[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

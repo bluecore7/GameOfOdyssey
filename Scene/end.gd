@@ -16,6 +16,3 @@ func _on_quit_pressed() -> void:
 	button_blip.play()
 	await get_tree().create_timer(0.1).timeout
 	get_tree().quit()
-
-func _restart() -> void:
-	_on_main_menu_pressed()

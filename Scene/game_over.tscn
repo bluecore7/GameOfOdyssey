@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://Scene/game_over.gd" id="1_gover"]
 [ext_resource type="Texture2D" uid="uid://cfam3oknxejtj" path="res://assets/images/Game_over.png" id="1_iosw2"]
+[ext_resource type="AudioStream" uid="uid://dvd6kvb6dshul" path="res://assets/audio/blip.wav" id="3_blip"]
 
 [node name="Game_Over" type="Node2D" unique_id=4947860]
 script = ExtResource("1_gover")
@@ -49,3 +50,29 @@ bbcode_enabled = true
 text = "[shake rate=20.0 level=8 connected=1]Welcome to the 
 Realm of Hades[/shake]"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=19485721]
+offset_left = 426.0
+offset_top = 470.0
+offset_right = 726.0
+offset_bottom = 590.0
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="MainMenu" type="Button" parent="VBoxContainer" unique_id=892347101]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 26
+text = "Main Menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=892347102]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[node name="ButtonBlip" type="AudioStreamPlayer" parent="." unique_id=78219462]
+stream = ExtResource("3_blip")
+
+[connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
