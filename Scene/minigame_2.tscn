@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://ducwug6eotnc7"]
 
-[ext_resource type="Texture2D" uid="uid://dcfrl0qbncj5w" path="res://icon.svg" id="1_1a88x"]
 [ext_resource type="Script" uid="uid://saeu08trwjj0" path="res://Scene/minigame_2.gd" id="1_hc76h"]
 [ext_resource type="Script" uid="uid://2d6vcnw51abq" path="res://Scene/button_1.gd" id="2_hc76h"]
+[ext_resource type="Texture2D" uid="uid://0bycj4lno18g" path="res://assets/images/background_mini_2.png" id="2_k70ht"]
+[ext_resource type="Texture2D" uid="uid://dcl60mmif5kfo" path="res://assets/images/characters/mermaid_active.png" id="3_ihuf6"]
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="3_k70ht"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ihuf6"]
+[ext_resource type="Texture2D" uid="uid://ca64ho232cjti" path="res://assets/images/characters/mermaid_inactive.png" id="4_8x6x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8x6x7"]
-size = Vector2(1151, 136)
+size = Vector2(1148, 131)
 
 [node name="minigame_2" type="Node2D" unique_id=193282865]
 script = ExtResource("1_hc76h")
@@ -20,55 +20,77 @@ autoscroll = Vector2(100, 0)
 [node name="Background" type="TextureRect" parent="Scrolling_Background" unique_id=1542517842]
 offset_right = 1147.0
 offset_bottom = 517.0
-texture = SubResource("PlaceholderTexture2D_ihuf6")
+scale = Vector2(0.5822627, 0.6466613)
+texture = ExtResource("2_k70ht")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Scrolling_Background/Background" unique_id=523519466]
+layout_mode = 0
+offset_left = 838.1097
+offset_top = 86.59866
+offset_right = 1181.5973
+offset_bottom = 160.82608
+theme_override_colors/default_color = Color(0.41000003, 0.70500004, 1, 1)
+theme_override_colors/font_shadow_color = Color(18.892157, 18.892157, 18.469584, 0.54901963)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave]Find the SIRENS[/wave]"
 
 [node name="Platform1" type="StaticBody2D" parent="." unique_id=421455376]
 
 [node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=501074129]
 offset_left = 3.0
-offset_top = 513.0
+offset_top = 512.0
 offset_right = 1152.0
 offset_bottom = 645.0
-color = Color(0.7607843, 0.4392157, 0.16078432, 1)
+color = Color(0.27199998, 0.46560007, 0.8, 0.92941177)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1247837890]
-position = Vector2(579.5, 575)
+position = Vector2(578, 577.5)
 shape = SubResource("RectangleShape2D_8x6x7")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=458011987]
-offset_left = 8.000015
-offset_top = 24.0
-offset_right = 136.00002
-offset_bottom = 152.0
-scale = Vector2(0.80000025, 0.84000003)
-texture_normal = ExtResource("1_1a88x")
+offset_left = 88.0
+offset_top = 16.000002
+offset_right = 1366.0
+offset_bottom = 1246.0
+scale = Vector2(0.06941214, 0.0603114)
+texture_normal = ExtResource("3_ihuf6")
+texture_pressed = ExtResource("4_8x6x7")
 script = ExtResource("2_hc76h")
 
-[node name="Button_2" type="TextureButton" parent="." unique_id=81902109]
-offset_left = 744.0
-offset_top = 80.0
-offset_right = 872.0
-offset_bottom = 208.0
-scale = Vector2(0.80000025, 0.84000003)
-texture_normal = ExtResource("1_1a88x")
+[node name="Button_4" type="TextureButton" parent="." unique_id=87071510]
+offset_left = 336.0
+offset_top = 208.0
+offset_right = 1614.0
+offset_bottom = 1438.0
+scale = Vector2(0.06941214, 0.0603114)
+texture_normal = ExtResource("3_ihuf6")
+texture_pressed = ExtResource("4_8x6x7")
 script = ExtResource("2_hc76h")
 
-[node name="Button_3" type="TextureButton" parent="." unique_id=65043633]
-offset_left = 264.0
-offset_top = 352.0
-offset_right = 392.0
-offset_bottom = 480.0
-scale = Vector2(0.80000025, 0.84000003)
-texture_normal = ExtResource("1_1a88x")
+[node name="Button_2" type="TextureButton" parent="." unique_id=699359139]
+offset_left = 56.0
+offset_top = 376.0
+offset_right = 1334.0
+offset_bottom = 1606.0
+scale = Vector2(0.06941214, 0.0603114)
+texture_normal = ExtResource("3_ihuf6")
+texture_pressed = ExtResource("4_8x6x7")
 script = ExtResource("2_hc76h")
 
-[node name="Button_4" type="TextureButton" parent="." unique_id=1022145091]
-offset_left = 920.0
-offset_top = 392.00003
-offset_right = 1048.0
-offset_bottom = 520.0
-scale = Vector2(0.80000025, 0.84000003)
-texture_normal = ExtResource("1_1a88x")
+[node name="Button_3" type="TextureButton" parent="." unique_id=1444317271]
+offset_left = 616.0
+offset_top = 432.0
+offset_right = 1894.0
+offset_bottom = 1662.0
+scale = Vector2(0.06941214, 0.0603114)
+texture_normal = ExtResource("3_ihuf6")
+texture_pressed = ExtResource("4_8x6x7")
 script = ExtResource("2_hc76h")
 
 [node name="Themed_timer" parent="." unique_id=919372843 instance=ExtResource("3_k70ht")]
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
