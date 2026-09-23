@@ -18,7 +18,10 @@ func _process(_delta: float) -> void:
 	if timer_end:
 		Global.minigames_done -= 1
 		Global.lives -= 1
-		get_tree().change_scene_to_file("res://Scene/level_screen.tscn")
+		if Global.lives <= 0:
+			get_tree().change_scene_to_file("res://Scene/game_over.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scene/level_screen.tscn")
 
 func garlic_collect() -> void:
 	garlic_collected += 1

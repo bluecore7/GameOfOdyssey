@@ -9,6 +9,10 @@ extends Node2D
 var time
 
 func _ready() -> void:
+	if Global.lives <= 0:
+		get_tree().change_scene_to_file("res://Scene/game_over.tscn")
+		return
+
 	if Global.minigames_done < 3:
 		Global.minigames_done += 1
 		

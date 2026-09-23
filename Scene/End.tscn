@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c0erfb0mv3xxf"]
+
+[ext_resource type="Texture2D" uid="uid://b88acsqodbvhn" path="res://assets/images/END.png" id="1_00xbc"]
+
+[node name="END" type="Node2D" unique_id=797759765]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1852487304]
+offset_right = 824.0
+offset_bottom = 432.0
+scale = Vector2(0.6893053, 0.6860826)
+texture = ExtResource("1_00xbc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1142944170]
+offset_left = 632.0
+offset_top = 24.0
+offset_right = 928.0
+offset_bottom = 128.0
+theme_override_colors/default_color = Color(0.9882353, 0.7764706, 0.32941177, 1)
+theme_override_colors/font_outline_color = Color(0.79607844, 0.32156864, 0.23921569, 1)
+theme_override_colors/font_shadow_color = Color(0.94509804, 0.43529412, 0.17254902, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 70
+text = "END"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=601607233]
+offset_left = 208.0
+offset_top = 208.0
+offset_right = 936.0
+offset_bottom = 272.0
+theme_override_colors/default_color = Color(0.9882353, 0.7764706, 0.3254902, 1)
+theme_override_colors/font_outline_color = Color(0.9372549, 0.38431373, 0.17254902, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 35
+text = "Who doesn't understand pain?"

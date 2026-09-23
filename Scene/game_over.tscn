@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bwq2snhxgdj1v"]
+
+[ext_resource type="Script" path="res://Scene/game_over.gd" id="1_gover"]
+[ext_resource type="Texture2D" uid="uid://cfam3oknxejtj" path="res://assets/images/Game_over.png" id="1_iosw2"]
+
+[node name="Game_Over" type="Node2D" unique_id=4947860]
+script = ExtResource("1_gover")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=14516240]
+offset_right = 1983.0
+offset_bottom = 793.0
+scale = Vector2(0.5808578, 0.81903994)
+texture = ExtResource("1_iosw2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect" unique_id=1781423406]
+layout_mode = 0
+offset_left = 537.1366
+offset_top = 136.74547
+offset_right = 1391.0461
+offset_bottom = 361.39874
+theme_override_colors/default_color = Color(0.6862745, 0.5882353, 0.44313726, 1)
+theme_override_colors/font_outline_color = Color(0.07450981, 0.12156863, 0.20784314, 1)
+theme_override_colors/font_shadow_color = Color(0.627451, 0.23529412, 0.12941177, 1)
+theme_override_constants/line_separation = 3
+theme_override_constants/shadow_outline_size = 30
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/normal_font_size = 120
+theme_override_font_sizes/bold_italics_font_size = 70
+bbcode_enabled = true
+text = "[shake rate=20.0 level=8 connected=1]Game Over[/shake]"
+horizontal_alignment = 1
+justification_flags = 171
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TextureRect" unique_id=42888185]
+layout_mode = 0
+offset_left = 454.5002
+offset_top = 312.56107
+offset_right = 1459.9098
+offset_bottom = 537.21436
+theme_override_colors/default_color = Color(0.60784316, 0.26666668, 0.18039216, 1)
+theme_override_colors/font_outline_color = Color(0.07450981, 0.12156863, 0.20784314, 1)
+theme_override_colors/font_shadow_color = Color(0.627451, 0.23529412, 0.12941177, 1)
+theme_override_constants/line_separation = 3
+theme_override_constants/shadow_outline_size = 30
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/normal_font_size = 70
+theme_override_font_sizes/bold_italics_font_size = 70
+bbcode_enabled = true
+text = "[shake rate=20.0 level=8 connected=1]Welcome to the 
+Realm of Hades[/shake]"
+horizontal_alignment = 1
