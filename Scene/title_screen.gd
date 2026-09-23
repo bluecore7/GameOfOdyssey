@@ -21,12 +21,14 @@ func type_out(label: RichTextLabel, delay: float) -> void:
 
 func _on_start_pressed() -> void:
 	button_blip.play()
-	
+	Global.lives = 3
+	Global.minigames_done = 0
 	get_tree().change_scene_to_file("res://Scene/level_screen.tscn")
 
 func _on_settings_pressed() -> void:
 	button_blip.play()
-	print("Settings pressed")
+	await get_tree().create_timer(0.08).timeout
+	get_tree().change_scene_to_file("res://Scene/settings.tscn")
 
 func _on_quit_pressed() -> void:
 	button_blip.play()
