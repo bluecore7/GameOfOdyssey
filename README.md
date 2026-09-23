@@ -1,8 +1,8 @@
-# Odyssey <img src="https://github.com/bluecore7/GameOfOdyssey.git/assets/images/Player/walk/walk_1.png" height="35">
+# Odyssey <img src="https://github.com/bluecore7/GameOfOdyssey/blob/main/assets/images/Player/walk/walk_1.png" height="35">
 
 A Greek mythology-inspired 2D minigame where players has to help Odysseys pause the 3 levels to reach ithica 
 
-![Odyssey Title Screen](https://github.com/bluecore7/GameOfOdyssey.git/assets/GITIMG/Title.png)
+![Odyssey Title Screen](https://github.com/bluecore7/GameOfOdyssey/blob/main/assets/images/Title.png)
 
 ##  Try It
 
