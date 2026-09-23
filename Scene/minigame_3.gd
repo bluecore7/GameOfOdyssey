@@ -12,8 +12,8 @@ var game_over: bool = false
 func _ready() -> void:
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 	
-	# Start survival countdown (e.g. survive 8 seconds to escape)
-	await themed_timer.Timer(8.0)
+	# Start survival countdown (survive 1 minute to escape)
+	await themed_timer.Timer(60.0)
 	
 	# If player survived without game over:
 	if not game_over:
