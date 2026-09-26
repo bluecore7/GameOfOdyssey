@@ -1,62 +1,56 @@
-# Odyssey <img src="https://github.com/bluecore7/GameOfOdyssey.git/assets/images/Player/walk/walk_1.png" height="35">
+# Odyssey
 
-A Greek mythology-inspired 2D minigame where players has to help Odysseys pause the 3 levels to reach ithica 
+A Greek mythology-themed 2D minigame collection built in Godot where you face three mythological trials to guide Odysseus home to Ithaca.
 
-![Odyssey Title Screen](https://github.com/bluecore7/GameOfOdyssey.git/assets/GITIMG/Title.png)
+Try here: [https://bluecore7.itch.io/the-game-of-odyssey](https://bluecore7.itch.io/the-game-of-odyssey)
 
-##  Try It
+![Odyssey Title Screen](assets/GITIMG/Title.png)
 
-**[Play Odyssey on Itch.io](https://bluecore7.itch.io/the-game-of-odyssey)*
+## Features
 
----
+- 3 unique minigames with escalating difficulty
+- Lives system — 3 lives per run
+- Custom art assets and hand-drawn sprites
+- Typewriter text animations on title and level screens
+- Background music with in-game volume and mute controls
+- Dedicated settings, game over, and win screens
+- Sound effects for UI interactions
 
+## Minigames
 
+**Stage 1 — Blue Lotus**: Collect 3 lotuses before the 10-second timer runs out. Move with arrow keys.
 
-## Story (Chapter -1 )
+**Stage 2 — The Sirens**: Click on all 4 sirens within 7 seconds to silence their song.
 
-- **Athena's Favor (Lives System)**: 
+**Stage 3 — The Cyclopes**: Survive 60 seconds dodging boulders hurled by Polyphemus. One hit and you lose a life.
 
-Odysseus starts with 3 divine blessings of Athena. Each failure costs a life; lose all three and face Hades on the Game Over screen.
-
-- **3 Mythological Trials**:
-
-
-  - **Stage 1: Blue Lotus** – Race against a strict countdown to gather mystical lotuses before memory fades.
-  - **Stage 2: The Sirens** – Resist temptation and click down enchanting sirens before their song seals your fate.
-  - **Stage 3: The Cyclopes** – Dodge heavy boulders hurled by Polyphemus in an intense 60-second survival evasion challenge.
-
-
-##  How to Run It Locally
+## How to Run Locally
 
 ### Prerequisites
-- **Godot Engine 4.3 or 4.4+** (Standard 64-bit edition — no .NET required)
+
+- [Godot Engine 4.3+](https://godotengine.org/download) (Standard 64-bit — no .NET required)
 - Git
 
 ### Steps
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Bluecore/GameOfOdyssey.git
+   git clone https://github.com/bluecore7/GameOfOdyssey.git
    ```
 
 2. **Open in Godot**:
-   - Launch the Godot Project Manager.
-   - Click **Import**, browse to the cloned folder, select `project.godot`, and click **Import & Edit**.
+   - Launch the Godot Project Manager
+   - Click **Import**, browse to the cloned folder, select `project.godot`, and click **Import & Edit**
 
-3. **Run the Game**:
-   - Press `F5` inside the Godot editor, or execute from your command line:
+3. **Run the game**:
+   - Press `F5` inside the Godot editor, or from command line:
      ```bash
      godot --path .
      ```
 
----
-
-
-
-##  Credits
+## Credits
 
 - **Engine**: [Godot Engine](https://godotengine.org/)
-- **Music & Sound**:
-  - Background Theme: `cynicbattleloop.ogg`
-  - Sound Effects: Mechanical typewriter clicks (`typewriter.wav`) and UI button blips (`blip.wav`)
-- **Art Assets**: Greek mythology inspired art for Odysseus, Athena, the Sirens, and Polyphemus the Cyclops.
+- **Background Music**: `cynicbattleloop.ogg`
+- **Sound Effects**: Typewriter clicks (`typewriter.wav`) and UI blips (`blip.wav`)
+- **Art Assets**: AI generated pixel art for Odysseus, Athena, the Sirens, and Polyphemus
