@@ -1,35 +1,35 @@
 # Odyssey
 
-A Greek mythology-themed 2D minigame collection built in Godot where you face three mythological trials to guide Odysseus home to Ithaca.
+A Greek mythology-themed 2D minigame collection built in Godot.
 
 Try here: [https://bluecore7.itch.io/the-game-of-odyssey](https://bluecore7.itch.io/the-game-of-odyssey)
 
 ![Odyssey Title Screen](assets/GITIMG/Title.png)
 
-## Features
+## The Game
 
-- 3 unique minigames with escalating difficulty
-- Lives system — 3 lives per run
-- Custom art assets and hand-drawn sprites
-- Typewriter text animations on title and level screens
-- Background music with in-game volume and mute controls
-- Dedicated settings, game over, and win screens
-- Sound effects for UI interactions
+
+The story starts from Troy. You are on the way back home (to Ithaca) after the Battle of Troy. In this long sea voyage, you and your crew are gonna face multiple life-taking challenges. Face it with your Hope and reach your Kingdom — Ithaca.
+
+You may end in Helios (Game Over), or you may reach your kingdom.
 
 ## Minigames
 
-**Stage 1 — Blue Lotus**: Collect 3 lotuses before the 10-second timer runs out. Move with arrow keys.
+**Stage 1 — Blue Lotus**: Collect the lotuses before the timer ends (They make you forget home).
 
-**Stage 2 — The Sirens**: Click on all 4 sirens within 7 seconds to silence their song.
+**Stage 2 — The Sirens**: Stop the sirens from singing the song that gives you pain and takes your life — spot them.
 
-**Stage 3 — The Cyclopes**: Survive 60 seconds dodging boulders hurled by Polyphemus. One hit and you lose a life.
+**Stage 3 — The Cyclopes**: You accidentally landed on the island where the son of Poseidon lives. Escape from the one-eyed giant — a single blow can take your life. 
+
+Use left (←) and right (→) arrows to move!
+
+Use the space button to jump!
 
 ## How to Run Locally
 
 ### Prerequisites
 
 - [Godot Engine 4.3+](https://godotengine.org/download) (Standard 64-bit — no .NET required)
-- Git
 
 ### Steps
 
