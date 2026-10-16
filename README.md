@@ -48,9 +48,3 @@ Use the space button to jump!
      godot --path .
      ```
 
-## Credits
-
-- **Engine**: [Godot Engine](https://godotengine.org/)
-- **Background Music**: `cynicbattleloop.ogg`
-- **Sound Effects**: Typewriter clicks (`typewriter.wav`) and UI blips (`blip.wav`)
-- **Art Assets**: AI generated pixel art for Odysseus, Athena, the Sirens, and Polyphemus
