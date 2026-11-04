@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://eiwa3y4y83ey"]
 
 [ext_resource type="Script" uid="uid://b7h6siyq4hvwt" path="res://falling_hazard.gd" id="1_etwbg"]
-[ext_resource type="Texture2D" uid="uid://tqnwhe200vhi" path="res://assets/images/characters/one_eyed_gaint.png" id="2_iaty6"]
+[ext_resource type="Texture2D" uid="uid://bngi0fefvxoin" path="res://assets/replacements/gaint.png" id="2_etwbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20pqg"]
 size = Vector2(96, 96)
@@ -10,8 +10,9 @@ size = Vector2(96, 96)
 script = ExtResource("1_etwbg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=576199265]
-scale = Vector2(0.07464882, 0.08176301)
-texture = ExtResource("2_iaty6")
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(2.909091, 2.9090908)
+texture = ExtResource("2_etwbg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1876910218]
 shape = SubResource("RectangleShape2D_20pqg")

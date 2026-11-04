@@ -53,3 +53,4 @@ Hope you have fun playing!
 - **Engine**: [Godot Engine](https://godotengine.org/)
 - **Background Music**: `cynicbattleloop.ogg`
 - **Sound Effects**: Typewriter clicks (`typewriter.wav`) and UI blips (`blip.wav`)
+- **Arts** : Created using GIMP

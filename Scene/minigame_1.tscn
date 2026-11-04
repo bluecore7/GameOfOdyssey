@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu8w0h0bu8x8b" path="res://Scene/minigame_1.gd" id="1_c70rt"]
 [ext_resource type="PackedScene" uid="uid://bhyo532kc4ji" path="res://Scene/Players/player.tscn" id="1_hcyjv"]
-[ext_resource type="Texture2D" uid="uid://2kkg347u3a3s" path="res://assets/images/background_mini_1.png" id="2_keeiu"]
+[ext_resource type="Texture2D" uid="uid://wgndisc0ysh3" path="res://assets/replacements/minigame_1.png" id="2_keeiu"]
 [ext_resource type="Script" uid="uid://ei77v4e8xchb" path="res://Scene/garlic.gd" id="2_omgj1"]
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="3_c70rt"]
 [ext_resource type="Texture2D" uid="uid://cup2ki186g16m" path="res://assets/images/lotus.png" id="5_d7yb5"]
@@ -58,8 +58,8 @@ autoscroll = Vector2(100, 0)
 metadata/_edit_lock_ = true
 
 [node name="Background" type="TextureRect" parent="Scrolling_Background" unique_id=958162375]
-offset_right = 2087.0
-offset_bottom = 753.0
+offset_right = 1808.1216
+offset_bottom = 752.3351
 scale = Vector2(0.5522145, 0.68596697)
 texture = ExtResource("2_keeiu")
 

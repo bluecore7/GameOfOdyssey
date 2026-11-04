@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b0qhamgjkq27u"]
 
 [ext_resource type="Script" uid="uid://d14qbu3ra2as5" path="res://Scene/minigame_3.gd" id="1_0konc"]
-[ext_resource type="Texture2D" uid="uid://wp8f50aaaa5n" path="res://assets/images/the_Cyclopes.png" id="1_ttgjc"]
 [ext_resource type="PackedScene" uid="uid://bhyo532kc4ji" path="res://Scene/Players/player.tscn" id="2_6sc5i"]
+[ext_resource type="Texture2D" uid="uid://tptc2ucxx2v1" path="res://assets/replacements/minigame_3.png" id="2_l4emm"]
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="4_fx0o3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4emm"]
@@ -18,10 +18,10 @@ size = Vector2(1148.5, 128)
 script = ExtResource("1_0konc")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1036724274]
-offset_right = 1144.0
-offset_bottom = 520.0
+offset_right = 1672.3656
+offset_bottom = 961.62866
 scale = Vector2(0.68884456, 0.54906845)
-texture = ExtResource("1_ttgjc")
+texture = ExtResource("2_l4emm")
 
 [node name="Wall" type="StaticBody2D" parent="." unique_id=1137164025]
 

@@ -6,7 +6,7 @@ extends Node2D
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
 @onready var stage_name : RichTextLabel =$Stage_Name
-var time
+var time: float = 0.0
 
 func _ready() -> void:
 	if Global.lives <= 0:
@@ -15,8 +15,12 @@ func _ready() -> void:
 
 	if Global.minigames_done < 3:
 		Global.minigames_done += 1
-		
+	
 	stage_name.text = Global.Game_Name.get(Global.minigames_done, "") 
+	
+	# Update health display once (no need to run every frame)
+	_update_health_display()
+	level.text = "Level " + str(Global.minigames_done)
 	
 	# Start typewriter effect in code
 	type_out(stage_name, 0.06)
@@ -27,6 +31,18 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://Scene/minigame_" + str(Global.minigames_done) + ".tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scene/title_screen.tscn")
+
+func _update_health_display() -> void:
+	match Global.lives:
+		2:
+			athena_1.hide()
+		1:
+			athena_1.hide()
+			athena_2.hide()
+		0:
+			athena_1.hide()
+			athena_2.hide()
+			athena_3.hide()
 
 # Helper function to type character by character
 func type_out(label: RichTextLabel, speed: float) -> void:
@@ -39,24 +55,8 @@ func type_out(label: RichTextLabel, speed: float) -> void:
 		# $TypeSound.play()
 		await get_tree().create_timer(speed).timeout
 		
-func _process(_delta: float) -> void: # runs EVERY FRAME
-	match Global.lives: # asks or checks if lives is equal to one of 
-#these values, cool hack. by the way this is a horrid way to illustrate the 
-#lives visually so later you can always find alternative code. Now, dw abt it.
-
-
-		2:
-			athena_1.hide()
-		1:
-			athena_1.hide()
-			athena_2.hide()
-		0:
-			athena_1.hide()
-			athena_2.hide()
-			athena_3.hide()
-	
-	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
-	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
+func _process(_delta: float) -> void:
+	timer.text = str("%0.1f" % max(time, 0.0))
 
 func Timer(start_time: float): # making a new function for timer countdown!
 	# we want the timer to go down, and when it reaches 0 it transitions 

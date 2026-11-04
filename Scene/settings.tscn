@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://ceoctjb5svtxx"]
 
 [ext_resource type="Script" uid="uid://cyjebk2ap6nq4" path="res://Scene/settings.gd" id="1_settings"]
-[ext_resource type="Texture2D" uid="uid://kb6h38yg2txv" path="res://assets/images/Title.png" id="2_u8psj"]
+[ext_resource type="Texture2D" uid="uid://syrys6r7erka" path="res://assets/replacements/tile.png" id="2_cmh6x"]
 [ext_resource type="AudioStream" uid="uid://dvd6kvb6dshul" path="res://assets/audio/blip.wav" id="3_blip"]
+[ext_resource type="Texture2D" uid="uid://dpma5ry1fro6d" path="res://assets/replacements/player.png" id="4_cwsml"]
 
 [node name="Settings" type="Node2D" unique_id=1466913829]
 script = ExtResource("1_settings")
@@ -11,7 +12,7 @@ script = ExtResource("1_settings")
 offset_right = 2814.0
 offset_bottom = 1536.0
 scale = Vector2(0.409553, 0.422431)
-texture = ExtResource("2_u8psj")
+texture = ExtResource("2_cmh6x")
 metadata/_edit_lock_ = true
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=2041719797]
@@ -81,6 +82,11 @@ text = "Back"
 
 [node name="ButtonBlip" type="AudioStreamPlayer" parent="." unique_id=381660179]
 stream = ExtResource("3_blip")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=759069934]
+position = Vector2(238.00002, 369)
+scale = Vector2(2.29375, 2.286111)
+texture = ExtResource("4_cwsml")
 
 [connection signal="value_changed" from="VBoxContainer/VolumeRow/MusicSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="toggled" from="VBoxContainer/MuteButton" to="." method="_on_mute_toggled"]

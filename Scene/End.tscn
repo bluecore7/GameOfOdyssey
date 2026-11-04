@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://c0erfb0mv3xxf"]
 
-[ext_resource type="Texture2D" uid="uid://b88acsqodbvhn" path="res://assets/images/END.png" id="1_00xbc"]
-[ext_resource type="Script" path="res://Scene/end.gd" id="2_end"]
+[ext_resource type="Script" uid="uid://ol3bfcx5dft0" path="res://Scene/end.gd" id="2_end"]
+[ext_resource type="Texture2D" uid="uid://ckrbmnoh5jmqg" path="res://assets/replacements/Win.png" id="2_srh2k"]
 [ext_resource type="AudioStream" uid="uid://dvd6kvb6dshul" path="res://assets/audio/blip.wav" id="3_blip"]
+[ext_resource type="Texture2D" uid="uid://dpma5ry1fro6d" path="res://assets/replacements/player.png" id="4_hgecu"]
 
 [node name="END" type="Node2D" unique_id=797759765]
 script = ExtResource("2_end")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1852487304]
-offset_right = 824.0
-offset_bottom = 432.0
+offset_right = 1671.2478
+offset_bottom = 944.4927
 scale = Vector2(0.6893053, 0.6860826)
-texture = ExtResource("1_00xbc")
+texture = ExtResource("2_srh2k")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1142944170]
-offset_left = 632.0
-offset_top = 24.0
-offset_right = 928.0
-offset_bottom = 128.0
+offset_left = 424.0
+offset_top = 64.0
+offset_right = 720.0
+offset_bottom = 168.0
 theme_override_colors/default_color = Color(0.9882353, 0.7764706, 0.32941177, 1)
 theme_override_colors/font_outline_color = Color(0.79607844, 0.32156864, 0.23921569, 1)
 theme_override_colors/font_shadow_color = Color(0.94509804, 0.43529412, 0.17254902, 1)
@@ -27,10 +28,10 @@ text = "END"
 horizontal_alignment = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=601607233]
-offset_left = 208.0
-offset_top = 208.0
-offset_right = 936.0
-offset_bottom = 272.0
+offset_left = 200.0
+offset_top = 240.0
+offset_right = 928.0
+offset_bottom = 304.0
 theme_override_colors/default_color = Color(0.9882353, 0.7764706, 0.3254902, 1)
 theme_override_colors/font_outline_color = Color(0.9372549, 0.38431373, 0.17254902, 1)
 theme_override_constants/outline_size = 10
@@ -59,6 +60,11 @@ text = "Quit"
 
 [node name="ButtonBlip" type="AudioStreamPlayer" parent="." unique_id=1161909572]
 stream = ExtResource("3_blip")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1417680885]
+position = Vector2(328, 448)
+scale = Vector2(1.5, 1.5222222)
+texture = ExtResource("4_hgecu")
 
 [connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

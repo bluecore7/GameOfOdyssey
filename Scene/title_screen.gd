@@ -4,9 +4,6 @@ extends Node2D
 @onready var type_key: AudioStreamPlayer = $TypeKey
 @onready var button_blip: AudioStreamPlayer = $ButtonBlip
 
-func _process(_delta: float) -> void:
-	pass
-
 func _ready() -> void:
 	type_out(subtitle, 0.08)
 

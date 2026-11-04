@@ -3,7 +3,7 @@ extends Node2D
 @onready var button_blip: AudioStreamPlayer = $ButtonBlip
 
 func _ready() -> void:
-	pass
+	pass # Needed for @onready
 
 func _on_main_menu_pressed() -> void:
 	button_blip.play()

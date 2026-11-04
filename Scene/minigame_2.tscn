@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://saeu08trwjj0" path="res://Scene/minigame_2.gd" id="1_hc76h"]
 [ext_resource type="Script" uid="uid://2d6vcnw51abq" path="res://Scene/button_1.gd" id="2_hc76h"]
-[ext_resource type="Texture2D" uid="uid://0bycj4lno18g" path="res://assets/images/background_mini_2.png" id="2_k70ht"]
-[ext_resource type="Texture2D" uid="uid://dcl60mmif5kfo" path="res://assets/images/characters/mermaid_active.png" id="3_ihuf6"]
+[ext_resource type="Texture2D" uid="uid://dcnr3hhpyy8y7" path="res://assets/replacements/minigame_2.png" id="2_lsal0"]
+[ext_resource type="Texture2D" uid="uid://dpma5ry1fro6d" path="res://assets/replacements/player.png" id="3_guljb"]
 [ext_resource type="PackedScene" uid="uid://cusf6430fnrx3" path="res://Scene/Themed_timer.tscn" id="3_k70ht"]
-[ext_resource type="Texture2D" uid="uid://ca64ho232cjti" path="res://assets/images/characters/mermaid_inactive.png" id="4_8x6x7"]
+[ext_resource type="Texture2D" uid="uid://c3n75nti6p5to" path="res://assets/replacements/mermaid.png" id="7_ovnci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihuf6"]
 size = Vector2(108, 616)
@@ -24,10 +24,15 @@ repeat_size = Vector2(1000, 0)
 autoscroll = Vector2(100, 0)
 
 [node name="Background" type="TextureRect" parent="Scrolling_Background" unique_id=1542517842]
-offset_right = 1147.0
-offset_bottom = 517.0
+offset_right = 2033.4463
+offset_bottom = 791.75916
 scale = Vector2(0.5822627, 0.6466613)
-texture = ExtResource("2_k70ht")
+texture = ExtResource("2_lsal0")
+
+[node name="Player" type="Sprite2D" parent="Scrolling_Background/Background" unique_id=1620511994]
+position = Vector2(274.79004, 482.47824)
+scale = Vector2(1.7174377, 1.5464046)
+texture = ExtResource("3_guljb")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scrolling_Background/Background" unique_id=523519466]
 layout_mode = 0
@@ -73,48 +78,52 @@ position = Vector2(578, 577.5)
 shape = SubResource("RectangleShape2D_8x6x7")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=458011987]
-offset_left = 88.0
-offset_top = 16.000002
-offset_right = 1366.0
-offset_bottom = 1246.0
+offset_left = 272.0
+offset_top = 48.0
+offset_right = 1550.0
+offset_bottom = 1278.0
 scale = Vector2(0.06941214, 0.0603114)
-texture_normal = ExtResource("3_ihuf6")
-texture_pressed = ExtResource("4_8x6x7")
-script = ExtResource("2_hc76h")
-
-[node name="Button_4" type="TextureButton" parent="." unique_id=87071510]
-offset_left = 336.0
-offset_top = 208.0
-offset_right = 1614.0
-offset_bottom = 1438.0
-scale = Vector2(0.06941214, 0.0603114)
-texture_normal = ExtResource("3_ihuf6")
-texture_pressed = ExtResource("4_8x6x7")
+texture_normal = ExtResource("7_ovnci")
+ignore_texture_size = true
+stretch_mode = 4
 script = ExtResource("2_hc76h")
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=699359139]
-offset_left = 56.0
-offset_top = 376.0
-offset_right = 1334.0
-offset_bottom = 1606.0
+offset_left = 352.0
+offset_top = 424.00003
+offset_right = 1630.0
+offset_bottom = 1654.0
 scale = Vector2(0.06941214, 0.0603114)
-texture_normal = ExtResource("3_ihuf6")
-texture_pressed = ExtResource("4_8x6x7")
+texture_normal = ExtResource("7_ovnci")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_hc76h")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=87071510]
+offset_left = 423.99997
+offset_top = 160.00002
+offset_right = 1702.0
+offset_bottom = 1390.0
+scale = Vector2(0.06941214, 0.0603114)
+texture_normal = ExtResource("7_ovnci")
+ignore_texture_size = true
+stretch_mode = 4
 script = ExtResource("2_hc76h")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=1444317271]
-offset_left = 616.0
-offset_top = 432.0
-offset_right = 1894.0
-offset_bottom = 1662.0
+offset_left = 856.0
+offset_top = 304.00003
+offset_right = 2134.0
+offset_bottom = 1534.0
 scale = Vector2(0.06941214, 0.0603114)
-texture_normal = ExtResource("3_ihuf6")
-texture_pressed = ExtResource("4_8x6x7")
+texture_normal = ExtResource("7_ovnci")
+ignore_texture_size = true
+stretch_mode = 4
 script = ExtResource("2_hc76h")
 
 [node name="Themed_timer" parent="." unique_id=919372843 instance=ExtResource("3_k70ht")]
 
 [connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
-[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]

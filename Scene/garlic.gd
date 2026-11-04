@@ -10,5 +10,6 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and self.visible:
-		emit_signal("garlic_collected")
+		garlic_collected.emit()
+		self_area.set_deferred("monitoring", false)
 		self.hide()
